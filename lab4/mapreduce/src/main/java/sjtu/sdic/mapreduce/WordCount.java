@@ -17,11 +17,20 @@ import java.util.regex.Pattern;
 public class WordCount {
 
     public static List<KeyValue> mapFunc(String file, String value) {
-        return null;
+        // https://www.cnblogs.com/haodawang/p/5967219.html
+        // java 如何用pattern 和 Matcher 来使用正则表达式
+        Pattern pattern = Pattern.compile("[a-zA-Z0-9]+");
+        Matcher matcher = pattern.matcher(value);
+        List<KeyValue> list = new ArrayList<>();
+        while (matcher.find()){
+            String word = matcher.group();
+            list.add(new KeyValue(word, "1"));
+        }
+        return list;
     }
 
     public static String reduceFunc(String key, String[] values) {
-        return null;
+        return String.valueOf(values.length);
     }
 
     public static void main(String[] args) {

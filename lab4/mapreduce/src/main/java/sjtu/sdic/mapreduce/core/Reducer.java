@@ -5,14 +5,13 @@ import com.alibaba.fastjson.JSONObject;
 import sjtu.sdic.mapreduce.common.KeyValue;
 import sjtu.sdic.mapreduce.common.Utils;
 
-import java.io.File;
-import java.io.IOException;
+import java.io.*;
+import java.lang.reflect.Array;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Map;
-import java.util.TreeMap;
+import java.util.*;
+
+import static sjtu.sdic.mapreduce.common.Utils.reduceName;
 
 /**
  * Created by Cachhe on 2019/4/19.
@@ -58,6 +57,57 @@ public class Reducer {
      * @param reduceFunc user-defined reduce function
      */
     public static void doReduce(String jobName, int reduceTask, String outFile, int nMap, ReduceFunc reduceFunc) {
-        
+        // read the intermediate files for the task,
+        List<KeyValue> list = new ArrayList<>();
+        for(int i = 0; i<nMap; i++){
+            String inFile = reduceName(jobName, i, reduceTask);
+            String value = "";
+            try{
+                BufferedReader in = new BufferedReader(new FileReader(inFile));
+                String s;
+                while((s = in.readLine()) != null)
+                    value += s;
+            } catch (IOException e) {
+                System.out.println(e);
+            }
+            List l = JSONArray.parseArray(value, KeyValue.class);
+            list.addAll(l);
+        }
+        // sort the intermediate key/value pairs by key
+        Collections.sort(list, new Comparator<KeyValue>() {
+            @Override
+            public int compare(KeyValue kv1, KeyValue kv2) {return kv1.key.compareTo(kv2.key);
+            }
+        });
+        // call the user-defined reduce function {@code reduceFunc} for each key,
+        JSONObject jsonObject = new JSONObject();
+        List<String> last = new ArrayList<>();
+        if(list.size() == 0) return;
+        last.add(list.get(0).value);
+        for(int i=1; i<list.size(); i++){
+            // String比较要用equal
+            if(list.get(i).key.equals(list.get(i-1).key) != true){
+                String result = reduceFunc.reduce(list.get(i-1).key, last.toArray(new String[last.size()]));
+                jsonObject.put(list.get(i-1).key, result);
+                last.clear();
+            }
+            //else{
+                last.add(list.get(i).value);
+            //}
+        }
+        String result = reduceFunc.reduce(list.get(list.size()-1).key, last.toArray(new String[last.size()]));
+        jsonObject.put(list.get(list.size()-1).key, result);
+        last.clear();
+        // write reduceFunc's output to disk.
+        FileOutputStream fos = null;
+        File output = new File(outFile);
+        try {
+            fos = new FileOutputStream(output);
+            String s = jsonObject.toJSONString();
+            fos.write(s.getBytes());
+            fos.close();
+        } catch (Exception e){
+            e.printStackTrace();
+        }
     }
 }

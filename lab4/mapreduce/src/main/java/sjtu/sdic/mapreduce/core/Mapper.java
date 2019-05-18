@@ -4,12 +4,14 @@ import com.alibaba.fastjson.JSONArray;
 import sjtu.sdic.mapreduce.common.KeyValue;
 import sjtu.sdic.mapreduce.common.Utils;
 
-import java.io.File;
-import java.io.IOException;
-import java.nio.charset.StandardCharsets;
+import java.io.*;
 import java.nio.file.Files;
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
+
+import static sjtu.sdic.mapreduce.WordCount.mapFunc;
+import static sjtu.sdic.mapreduce.common.Utils.reduceName;
 
 /**
  * Created by Cachhe on 2019/4/19.
@@ -65,7 +67,47 @@ public class Mapper {
      * @param mapFunc the user-defined map function
      */
     public static void doMap(String jobName, int mapTask, String inFile, int nReduce, MapFunc mapFunc) {
-        
+        // read file
+        String value = "";
+        try{
+            // Files.readAllBytes(Path)方法把整个文件读入内存，此方法返回一个字节数组，
+            // 还可以把结果传递给String的构造器，以便创建字符串输出。
+            // 在针对大文件的读取的时候，可能会出现内存不足，导致堆溢出
+            value = new String(Files.readAllBytes(new File(inFile).toPath()));
+        } catch (IOException e) {
+            System.out.println(e);
+        }
+        // call the user-defined map function and partition
+        List<KeyValue> list = mapFunc(inFile, value);
+        List<KeyValue>[] partition_lists = new List[nReduce];
+        for (int i = 0; i < nReduce; i++)
+            partition_lists[i] = new ArrayList<>();
+        for(int i=0; i<list.size(); i++){
+            int r = hashCode(list.get(i).key);
+            r = r%nReduce;
+            partition_lists[r].add(list.get(i));
+        }
+        //generate intermediate files.
+        FileOutputStream fos = null;
+        for(int i = 0; i < nReduce; i++){
+            String ifname = reduceName(jobName, mapTask, i);
+            File output = new File(ifname);
+            try {
+                fos = new FileOutputStream(output);
+                String s = JSONArray.toJSONString(partition_lists[i]);
+                fos.write(s.getBytes());
+            } catch (Exception e){
+                e.printStackTrace();
+            } finally {
+                if (fos != null) {
+                    try {
+                        fos.close();
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
+                }
+            }
+        }
     }
 
     /**
