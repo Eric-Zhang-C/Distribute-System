@@ -52,7 +52,36 @@ public class Scheduler {
         // have completed successfully, schedule() should return.
         // Your code here (Part III, Part IV).
 
-        
+        try{
+            CountDownLatch latch = new CountDownLatch(nTasks);
+
+            int count = 0;
+            while(count < nTasks){
+                // learn about the set of workers by reading registerChan
+                String worker = registerChan.read();
+                DoTaskArgs doTaskArgs = new DoTaskArgs(jobName, mapFiles[count], phase, count, nOther);
+
+                new Thread(){
+                    public void run() {
+                        try {
+                            // System.out.println("子线程"+Thread.currentThread().getName()+"正在执行");
+                            Call.getWorkerRpcService(worker).doTask(doTaskArgs);;
+                            latch.countDown();
+                            registerChan.write(worker);
+                            // System.out.println("子线程"+Thread.currentThread().getName()+"执行完毕")
+                        } catch (InterruptedException e) {
+                            e.printStackTrace();
+                        }
+                    };
+                }.start();
+
+                count++;
+            }
+
+            latch.await();
+        } catch (InterruptedException e){
+            e.printStackTrace();
+        }
 
         System.out.println(String.format("Schedule: %s done", phase));
     }
