@@ -10,7 +10,6 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
-import static sjtu.sdic.mapreduce.WordCount.mapFunc;
 import static sjtu.sdic.mapreduce.common.Utils.reduceName;
 
 /**
@@ -78,7 +77,7 @@ public class Mapper {
             System.out.println(e);
         }
         // call the user-defined map function and partition
-        List<KeyValue> list = mapFunc(inFile, value);
+        List<KeyValue> list = mapFunc.map(inFile, value);
         List<KeyValue>[] partition_lists = new List[nReduce];
         for (int i = 0; i < nReduce; i++)
             partition_lists[i] = new ArrayList<>();

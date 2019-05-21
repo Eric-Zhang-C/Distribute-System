@@ -2,7 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ff219793-31c8-4463-8e76-b99805313d15" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/sjtu/sdic/mapreduce/core/Scheduler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sjtu/sdic/mapreduce/core/Scheduler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SDIC-lab-4_MapReduce.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/../SDIC-lab-4_MapReduce.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/sjtu/sdic/mapreduce/InvertedIndex.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sjtu/sdic/mapreduce/InvertedIndex.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/sjtu/sdic/mapreduce/core/Mapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sjtu/sdic/mapreduce/core/Mapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/sjtu/sdic/mapreduce/InvertedIndex.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/sjtu/sdic/mapreduce/InvertedIndex.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/sjtu/sdic/mapreduce/WordCount.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/sjtu/sdic/mapreduce/WordCount.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -21,52 +26,56 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="java" value="52" />
-          <entry key="txt" value="10" />
-          <entry key="wcseq" value="5" />
+          <entry key="iiseq" value="3" />
+          <entry key="iiseq-0-0" value="1" />
+          <entry key="iiseq-6-1" value="1" />
+          <entry key="iiseq-res-0" value="1" />
+          <entry key="java" value="67" />
+          <entry key="txt" value="27" />
+          <entry key="wcseq" value="6" />
           <entry key="wcseq-0-0" value="2" />
-          <entry key="wcseq-res-0" value="1" />
+          <entry key="wcseq-res-0" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JAVA" value="52" />
-          <entry key="PLAIN_TEXT" value="18" />
+          <entry key="JAVA" value="67" />
+          <entry key="PLAIN_TEXT" value="43" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="1467" />
+          <entry key="java" value="1708" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="1467" />
+          <entry key="JAVA" value="1708" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/sjtu/sdic/mapreduce/core/Scheduler.java">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/MRTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="313">
-              <caret line="96" column="26" selection-start-line="96" selection-start-column="26" selection-end-line="96" selection-end-column="26" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#2923#3759#0" expanded="true" />
-                <element signature="e#3758#3759#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="3774">
+              <caret line="240" selection-start-line="240" selection-end-line="240" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/MRTest.java">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/sjtu/sdic/mapreduce/core/Master.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="589">
-              <caret line="274" selection-start-line="274" selection-end-line="274" />
+            <state relative-caret-position="91">
+              <caret line="201" selection-start-line="201" selection-end-line="201" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#2344#2345#0" expanded="true" />
+                <element signature="e#2399#2400#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -84,11 +93,12 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/sjtu/sdic/mapreduce/core/Mapper.java" />
         <option value="$PROJECT_DIR$/src/main/java/sjtu/sdic/mapreduce/core/Reducer.java" />
-        <option value="$PROJECT_DIR$/src/main/java/sjtu/sdic/mapreduce/WordCount.java" />
         <option value="$PROJECT_DIR$/src/main/java/sjtu/sdic/mapreduce/core/Master.java" />
         <option value="$PROJECT_DIR$/src/main/java/sjtu/sdic/mapreduce/core/Scheduler.java" />
+        <option value="$PROJECT_DIR$/src/main/java/sjtu/sdic/mapreduce/WordCount.java" />
+        <option value="$PROJECT_DIR$/src/main/java/sjtu/sdic/mapreduce/core/Mapper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/sjtu/sdic/mapreduce/InvertedIndex.java" />
       </list>
     </option>
   </component>
@@ -166,6 +176,15 @@
               <item name="mapreduce" type="b2602c69:ProjectViewProjectNode" />
               <item name="mapreduce" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="mapreduce" type="462c0819:PsiDirectoryNode" />
+              <item name="rpc" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="mapreduce" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mapreduce" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -184,7 +203,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1558413920671" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1558418659341" />
     <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
   <component name="RunDashboard">
@@ -199,13 +218,39 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.MRTest.testManyFailures">
-    <configuration name="MRTest.testManyFailures" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.MRTest.testParallelCheck">
+    <configuration name="InvertedIndex" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="sjtu.sdic.mapreduce.InvertedIndex" />
+      <module name="mapreduce" />
+      <option name="PROGRAM_PARAMETERS" value="master sequential pg-*.txt" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="sjtu.sdic.mapreduce.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="WordCount" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="sjtu.sdic.mapreduce.WordCount" />
+      <module name="mapreduce" />
+      <option name="PROGRAM_PARAMETERS" value="master sequential pg-*.txt" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="sjtu.sdic.mapreduce.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MRTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="mapreduce" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="MRTest" />
-      <option name="METHOD_NAME" value="testManyFailures" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -215,16 +260,6 @@
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="MRTest" />
       <option name="METHOD_NAME" value="testOneFailure" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="MRTest.testParallelBasic" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="mapreduce" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="MRTest" />
-      <option name="METHOD_NAME" value="testParallelBasic" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -240,30 +275,20 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MRTest.testSequentialMany" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="mapreduce" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="MRTest" />
-      <option name="METHOD_NAME" value="testSequentialMany" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <list>
-      <item itemvalue="JUnit.MRTest.testSequentialMany" />
+      <item itemvalue="Application.InvertedIndex" />
+      <item itemvalue="Application.WordCount" />
+      <item itemvalue="JUnit.MRTest" />
       <item itemvalue="JUnit.MRTest.testParallelCheck" />
-      <item itemvalue="JUnit.MRTest.testParallelBasic" />
       <item itemvalue="JUnit.MRTest.testOneFailure" />
-      <item itemvalue="JUnit.MRTest.testManyFailures" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.MRTest.testManyFailures" />
-        <item itemvalue="JUnit.MRTest.testOneFailure" />
         <item itemvalue="JUnit.MRTest.testParallelCheck" />
-        <item itemvalue="JUnit.MRTest.testParallelBasic" />
-        <item itemvalue="JUnit.MRTest.testSequentialMany" />
+        <item itemvalue="JUnit.MRTest" />
+        <item itemvalue="JUnit.MRTest.testOneFailure" />
+        <item itemvalue="Application.WordCount" />
+        <item itemvalue="Application.InvertedIndex" />
       </list>
     </recent_temporary>
   </component>
@@ -277,48 +302,47 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1557923936290</updated>
-      <workItem from="1557923938912" duration="21020000" />
+      <workItem from="1557923938912" duration="25320000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="MRTest_testOneFailure - 2019.05.21 at 12h 08m 08s.xml">
+    <history-entry file="MRTest_testSequentialMany - 2019.05.21 at 12h 44m 13s.xml">
+      <configuration name="MRTest.testSequentialMany" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MRTest_testParallelBasic - 2019.05.21 at 12h 44m 28s.xml">
+      <configuration name="MRTest.testParallelBasic" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MRTest_testParallelCheck - 2019.05.21 at 12h 44m 51s.xml">
+      <configuration name="MRTest.testParallelCheck" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MRTest_testOneFailure - 2019.05.21 at 12h 45m 09s.xml">
       <configuration name="MRTest.testOneFailure" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="MRTest_testManyFailures - 2019.05.21 at 12h 08m 24s.xml">
+    <history-entry file="MRTest_testManyFailures - 2019.05.21 at 12h 45m 31s.xml">
       <configuration name="MRTest.testManyFailures" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="MRTest_testOneFailure - 2019.05.21 at 12h 36m 43s.xml">
+    <history-entry file="MRTest - 2019.05.21 at 14h 00m 56s.xml">
+      <configuration name="MRTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MRTest - 2019.05.21 at 14h 01m 39s.xml">
+      <configuration name="MRTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MRTest_testParallelCheck - 2019.05.21 at 14h 02m 15s.xml">
+      <configuration name="MRTest.testParallelCheck" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MRTest_testOneFailure - 2019.05.21 at 14h 02m 42s.xml">
       <configuration name="MRTest.testOneFailure" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="MRTest_testManyFailures - 2019.05.21 at 12h 37m 26s.xml">
-      <configuration name="MRTest.testManyFailures" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="MRTest_testManyFailures - 2019.05.21 at 12h 39m 39s.xml">
-      <configuration name="MRTest.testManyFailures" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="MRTest_testManyFailures - 2019.05.21 at 12h 41m 12s.xml">
-      <configuration name="MRTest.testManyFailures" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="MRTest_testManyFailures - 2019.05.21 at 12h 41m 57s.xml">
-      <configuration name="MRTest.testManyFailures" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="MRTest_testManyFailures - 2019.05.21 at 12h 42m 22s.xml">
-      <configuration name="MRTest.testManyFailures" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="MRTest_testOneFailure - 2019.05.21 at 12h 42m 37s.xml">
-      <configuration name="MRTest.testOneFailure" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="MRTest_testManyFailures - 2019.05.21 at 12h 42m 55s.xml">
-      <configuration name="MRTest.testManyFailures" configurationId="JUnit" />
+    <history-entry file="MRTest - 2019.05.21 at 14h 02m 59s.xml">
+      <configuration name="MRTest" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="21020000" />
+    <option name="totallyTimeSpent" value="25320000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info id="Image Layers" />
       <window_info id="Designer" />
@@ -356,18 +380,6 @@
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/sjtu/sdic/mapreduce/core/Mapper.java</url>
-          <line>70</line>
-          <properties />
-          <option name="timeStamp" value="11" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/main/java/sjtu/sdic/mapreduce/core/MapFunc.java">
@@ -420,46 +432,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mrtmp.wcseq-res-0">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-5517" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pg-dorian_gray.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pg-frankenstein.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pg-grimm.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pg-metamorphosis.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pg-sherlock_holmes.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pg-tom_sawyer.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pg-huckleberry_finn.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pg-being_ernest.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/sjtu/sdic/mapreduce/WordCount.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="61">
-          <caret line="23" column="48" lean-forward="true" selection-start-line="23" selection-start-column="48" selection-end-line="23" selection-end-column="48" />
-          <folding>
-            <element signature="e#874#875#0" expanded="true" />
-            <element signature="e#926#927#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/sjtu/sdic/mapreduce/core/Reducer.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="122">
@@ -470,27 +442,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/sjtu/sdic/mapreduce/core/Mapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="156">
-          <caret line="99" column="36" lean-forward="true" selection-start-line="99" selection-start-column="36" selection-end-line="99" selection-end-column="36" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/sjtu/sdic/mapreduce/common/DoTaskArgs.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
           <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mrtmp.wcseq">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-9255">
-          <caret line="329" column="8" lean-forward="true" selection-start-line="329" selection-start-column="8" selection-end-line="329" selection-end-column="8" />
         </state>
       </provider>
     </entry>
@@ -532,28 +487,6 @@
     <entry file="file://$USER_HOME$/Downloads/mapreduce-master/src/main/java/sjtu/sdic/mapreduce/rpc/Call.java">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/sjtu/sdic/mapreduce/rpc/Call.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="23" column="21" selection-start-line="23" selection-start-column="21" selection-end-line="23" selection-end-column="21" />
-          <folding>
-            <element signature="e#686#687#0" expanded="true" />
-            <element signature="e#744#745#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/sjtu/sdic/mapreduce/core/Master.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="237" column="21" lean-forward="true" selection-end-line="405" />
-          <folding>
-            <element signature="e#2344#2345#0" expanded="true" />
-            <element signature="e#2399#2400#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_181.jdk/Contents/Home/src.zip!/java/lang/Thread.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-515">
@@ -561,21 +494,137 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/MRTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="589">
-          <caret line="274" selection-start-line="274" selection-end-line="274" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/sjtu/sdic/mapreduce/core/Scheduler.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="313">
+        <state relative-caret-position="1632">
           <caret line="96" column="26" selection-start-line="96" selection-start-column="26" selection-end-line="96" selection-end-column="26" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#2923#3759#0" expanded="true" />
             <element signature="e#3758#3759#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mrtmp.wcseq-res-0">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-7321" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mrtmp.iiseq-res-0">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1186" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mrtmp.wcseq">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-46460">
+          <caret line="329" column="8" lean-forward="true" selection-start-line="329" selection-start-column="8" selection-end-line="329" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/sjtu/sdic/mapreduce/rpc/Call.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="23" column="21" selection-start-line="23" selection-start-column="21" selection-end-line="23" selection-end-column="21" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mrtmp.iiseq-0-0">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mrtmp.iiseq-6-1">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/sjtu/sdic/mapreduce/core/Mapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="62" column="8" selection-start-line="62" selection-start-column="8" selection-end-line="62" selection-end-column="8" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pg-being_ernest.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1224" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pg-dorian_gray.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-282" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pg-frankenstein.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-4086" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pg-grimm.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-5614" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pg-huckleberry_finn.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-8706" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pg-metamorphosis.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-4465" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pg-sherlock_holmes.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3728" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pg-tom_sawyer.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1286" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mrtmp.iiseq">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="152" column="24" selection-start-line="152" selection-start-column="24" selection-end-line="152" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/sjtu/sdic/mapreduce/WordCount.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-73">
+          <caret line="20" column="45" selection-start-line="20" selection-start-column="45" selection-end-line="20" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/sjtu/sdic/mapreduce/InvertedIndex.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-51">
+          <caret line="41" column="28" selection-start-line="41" selection-start-column="28" selection-end-line="41" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/MRTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3774">
+          <caret line="240" selection-start-line="240" selection-end-line="240" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/sjtu/sdic/mapreduce/core/Master.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="91">
+          <caret line="201" selection-start-line="201" selection-end-line="201" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2344#2345#0" expanded="true" />
+            <element signature="e#2399#2400#0" expanded="true" />
           </folding>
         </state>
       </provider>
