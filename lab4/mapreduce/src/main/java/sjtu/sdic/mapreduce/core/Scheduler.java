@@ -10,6 +10,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import java.util.concurrent.CountDownLatch;
+import java.util.concurrent.TimeUnit;
 
 /**
  * Created by Cachhe on 2019/4/22.
@@ -52,33 +53,48 @@ public class Scheduler {
         // have completed successfully, schedule() should return.
         // Your code here (Part III, Part IV).
 
+        //List<boolean> states = new ArrayList<boolean>(nTasks);
+        boolean[] taskStatus = new boolean[nTasks];
+        for (int i = 0; i < nTasks; i++) {
+            taskStatus[i] = false;
+        }
+
         try{
             CountDownLatch latch = new CountDownLatch(nTasks);
+            boolean allDone = false;
+            while(!allDone) {
+                int count = 0;
+                allDone = true;
+                while (count < nTasks) {
+                    if (taskStatus[count]) {
+                        count++;
+                        continue;
+                    }
+                    allDone = false;
+                    // learn about the set of workers by reading registerChan
+                    String worker = registerChan.read();
+                    DoTaskArgs doTaskArgs = new DoTaskArgs(jobName, mapFiles[count], phase, count, nOther);
 
-            int count = 0;
-            while(count < nTasks){
-                // learn about the set of workers by reading registerChan
-                String worker = registerChan.read();
-                DoTaskArgs doTaskArgs = new DoTaskArgs(jobName, mapFiles[count], phase, count, nOther);
-
-                new Thread(){
-                    public void run() {
-                        try {
-                            // System.out.println("子线程"+Thread.currentThread().getName()+"正在执行");
-                            Call.getWorkerRpcService(worker).doTask(doTaskArgs);;
-                            latch.countDown();
-                            registerChan.write(worker);
-                            // System.out.println("子线程"+Thread.currentThread().getName()+"执行完毕")
-                        } catch (InterruptedException e) {
-                            e.printStackTrace();
+                    new Thread() {
+                        public void run() {
+                            try {
+                                // System.out.println("子线程"+Thread.currentThread().getName()+"正在执行");
+                                Call.getWorkerRpcService(worker).doTask(doTaskArgs);
+                                taskStatus[doTaskArgs.taskNum] = true;
+                                latch.countDown();
+                                // am i need to add?
+                                registerChan.write(worker);
+                                // System.out.println("子线程"+Thread.currentThread().getName()+"执行完毕")
+                            } catch (InterruptedException e) {
+                                e.printStackTrace();
+                            }
                         }
-                    };
-                }.start();
+                    }.start();
 
-                count++;
+                    count++;
+                }
             }
-
-            latch.await();
+            latch.await(10000, TimeUnit.MILLISECONDS);
         } catch (InterruptedException e){
             e.printStackTrace();
         }
